@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-oct-2018, 12:08:53
+    Author     : racu
+*/
+
+#main{
+    width: 500px;
+    padding-left: 10px;
+}
+
+
+#containConver{
+    width: 500px;
+    height: 400px;
+    border: 2px #666666;
+    border-style: solid;
+    padding: 10px;
+}
+
+#dvButtons {
+    margin-top: 10px;
+}
+
+#errorMessage {
+    color: #ff3333;
+    width: 500px;
+    height: 100px;
+}
+
+
+#head{
+    width: 500px;
+    height: 100;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: right;
+    
+}
+
+#dvAllConversations{
+    margin: 10px;
+    border-style: dashed;
+    padding-top: 10px;
+    padding-left: 10px;
+}
