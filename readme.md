@@ -1,7 +1,7 @@
 # Project Inbenta
 
 - This project has been made with the Laravel framework.
-- To start the project, you must place it in the htdocs folder in XAMMP / LAMMP. Or using the command "php artisan serve". 
+- To start the project, you must place it in the htdocs folder in XAMMP / LAMMP. Or using the command "php artisan serve" inside the root project. 
 - In case of using XAMMP / LAMMP we will place ourselves in the public folder for the visualization of the project.
 
 
@@ -13,4 +13,9 @@
 - /public/js/ #There are the main JS files.
 - /storage/app/ # The .json file with all saved data of each conversation.
 - /constants # There are the config files and constants
+
+## Unit testing
+
+For execute unit test with command line inside the root project, execute vendor/bin/phpunit.
+
 
