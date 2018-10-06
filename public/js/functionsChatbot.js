@@ -7,6 +7,9 @@
 var jq = jQuery.noConflict();
 
 jq(document).ready(function () {
+    
+    // When loading shows the send or reset buttons depending on the chat status
+
     jq('#btnSendMessage').show();
     jq('#btnResetMessage').hide();
 
@@ -20,9 +23,13 @@ jq(document).ready(function () {
             }
         }
     });
+    //////////////////////////////////////////////////////
 
 
     jq("#btnSendMessage").click(function () {
+        // A message has been send to chatbot-ajax URL.
+        // It will response with a json that modifies the view.
+        
         var message = jq('#txtMessage').val();
         var fullConver = jq('#containConver').text();
         if (fullConver == null) {

@@ -21,8 +21,8 @@
     <body>
         <div id="main">
             <div id="head">
-                <button type="button" class="btn-primary" id="btnGoChatbot" onclick="location.href='{{ url('index') }}'">Chatbot</button>
-                <button type="button" class="btn-primary" id="btnGoHistory"  onclick="location.href='{{ url('history') }}'">History</button>
+                <button type="button" class="btn-primary" id="btnGoChatbot" onclick="location.href = '{{ url('index') }}'">Chatbot</button>
+                <button type="button" class="btn-primary" id="btnGoHistory"  onclick="location.href = '{{ url('history') }}'">History</button>
             </div>
             <h1> Chat Bot </h1>
             <div id="containConver">
@@ -38,6 +38,7 @@
             <div id="errorMessage">
 
             </div>
+
         </div>
     </body>
 </html>

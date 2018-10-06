@@ -7,46 +7,21 @@ use App\Http\Controllers\LogicController;
   | Web Routes
   |--------------------------------------------------------------------------
   |
-  | Here is where you can register web routes for your application. These
-  | routes are loaded by the RouteServiceProvider within a group which
-  | contains the "web" middleware group. Now create something great!
+  | All routes controlled by the Controller -> chatbotController
   |
  */
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', 'chatbotController@index');
 
-Route::get('index', function () {
-    return view('main');
-});
+Route::get('index', 'chatbotController@index');
 
-Route::get('history', function () {
-    return view('history');
-});
+Route::get('history', 'chatbotController@history');
 
-Route::post('chatbot-ajax', function () {
-    $logicController = new LogicController();
-    return $logicController->mainLogic();
-});
+Route::post('chatbot-ajax', 'chatbotController@chatbotLogic');
 
+Route::post('resetChatbot', 'chatbotController@resetChatbot');
 
-Route::post('resetChatbot', function () {
-    Session::flush();
-    $fullConver = '';
-    Session::put('fullConver', $fullConver);
-    Session::put('errNum', 0);
-    return Response::json(array(
-                'fullConver' => $fullConver,
-    ));
-});
-
-Route::post('getChatbotStatus', function () {
-    $idStatus = Session::get('chatbotStatus');
-    return Response::json(array(
-                'chatbotStatus' => $idStatus,
-    ));
-});
+Route::post('getChatbotStatus', 'chatbotController@getChatbotStatus');
 
 Route::post('getAllConversations', function () {
     $logicController = new LogicController();
