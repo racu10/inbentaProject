@@ -23,8 +23,5 @@ Route::post('resetChatbot', 'chatbotController@resetChatbot');
 
 Route::post('getChatbotStatus', 'chatbotController@getChatbotStatus');
 
-Route::post('getAllConversations', function () {
-    $logicController = new LogicController();
-    return $logicController->getParsedConversationFileToHTML();
-});
+Route::post('getAllConversations', 'chatbotController@getAllConversations');
 

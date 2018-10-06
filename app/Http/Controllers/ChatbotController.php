@@ -270,24 +270,24 @@ class ChatbotController extends Controller {
         /**
          * Parse an array that contains conversation for show as html
          */
-        $txtHtml = '';        
-        foreach ($arrJson as $key => $value) {
-                $value = json_decode($value);
-                $txtHtml = $txtHtml . '' . $value->{'conversation'} . '<br/><hr><br/>';
-            }        
+        $txtHtml = '';
+        foreach ($arrJSON as $key => $value) {
+            $value = json_decode($value);
+            $txtHtml = $txtHtml . '' . $value->{'conversation'} . '<br/><hr><br/>';
+        }
         return $txtHtml;
     }
-    
-    private function getHistory(){
+
+    private function getHistory() {
         /*
          * Recover all saved conversations and transform to a historical show.
          */
         $html = '';
         $arrConv = Chat::getAllConversations();
-        if($arrConv !== null){
+        if ($arrConv !== null) {
             $html = $this->getParsedConversationFileToHTML($arrConv);
-        } 
-        
+        }
+        return $html;
     }
 
 }
