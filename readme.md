@@ -13,7 +13,7 @@
 - /public/js/ #There are the main JS files.
 - /public/css/ #There are the main CSS files and Bootstrap.
 - /storage/app/ # The .json file with all saved data of each conversation.
-- /constants # There are the config files and constants
+- /constants/ # There are the config files and constants
 
 ## Unit testing
 
