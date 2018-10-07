@@ -11,6 +11,7 @@
 - /resources/views #There are the views
 - /routes/web.php #There are the routing system. This comunicates directly with the Controllers.
 - /public/js/ #There are the main JS files.
+- /public/css/ #There are the main CSS files and Bootstrap.
 - /storage/app/ # The .json file with all saved data of each conversation.
 - /constants # There are the config files and constants
 
