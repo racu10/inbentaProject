@@ -16,6 +16,6 @@
 
 ## Unit testing
 
-For execute unit test with command line inside the root project, execute vendor/bin/phpunit.
+For execute unit tests with command line -> inside the root project, execute vendor/bin/phpunit.
 
 
