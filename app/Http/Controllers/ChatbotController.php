@@ -220,6 +220,9 @@ class ChatbotController extends Controller {
     }
 
     private function getAttribute($attributeName) {
+        /*
+         * Recovers an attribute that its stored in Constants by name
+         */
         $arrAtt = Config::get('constants.botMessages.attributes');
 
         $arrAtt = json_decode(json_encode($arrAtt[0]));
@@ -260,8 +263,9 @@ class ChatbotController extends Controller {
 
         $chat['conversation'] = $fullConver;
 
-
-        Chat::saveChat($chat);
+        if (!Session::has('test')) {
+            Chat::saveChat($chat);
+        }
 
         return $fullConver;
     }

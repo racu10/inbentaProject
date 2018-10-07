@@ -1,7 +1,5 @@
 <?php
 
-//$this->session(['name' => 'RealName', 'email' => 'aa@aa.com', 'age' => '44']);
-
 namespace Tests\Unit;
 
 use Tests\TestCase;
@@ -45,7 +43,7 @@ class ChatBotControllerTest extends TestCase {
          * Check if status of chatbot is working
          */
 
-        $this->session(['chatbotStatus' => Config::get('constants.statusChatbot.OK')]);
+        $this->session(['test' => 1, 'chatbotStatus' => Config::get('constants.statusChatbot.OK')]);
         $response = $this->json('post', 'getChatbotStatus');
 
         $this->flushSession();
@@ -69,7 +67,7 @@ class ChatBotControllerTest extends TestCase {
          * Check if name is correct it return OK
          */
 
-        $this->session(['lastAsk' => $this->attName, 'infoAskUser' => ['name', 'email', 'age'], 'fullConver' => '']);
+        $this->session(['test' => 1, 'lastAsk' => $this->attName, 'infoAskUser' => ['name', 'email', 'age'], 'fullConver' => '']);
 
         $response = $this->json('post', 'chatbot-ajax', ['message' => $this->name]);
         $this->flushSession();
@@ -86,7 +84,7 @@ class ChatBotControllerTest extends TestCase {
          * Check if Email is correct it returns OK
          */
 
-        $this->session(['lastAsk' => $this->attEmail, 'infoAskUser' => ['email', 'age'], 'fullConver' => '']);
+        $this->session(['test' => 1, 'lastAsk' => $this->attEmail, 'infoAskUser' => ['email', 'age'], 'fullConver' => '']);
 
         $response = $this->json('post', 'chatbot-ajax', ['message' => $this->email]);
         $this->flushSession();
@@ -103,7 +101,7 @@ class ChatBotControllerTest extends TestCase {
          * Check if email is wrong it returns ERROR
          */
 
-        $this->session(['lastAsk' => $this->attEmail, 'infoAskUser' => ['email', 'age'], 'fullConver' => '']);
+        $this->session(['test' => 1, 'lastAsk' => $this->attEmail, 'infoAskUser' => ['email', 'age'], 'fullConver' => '']);
 
         $response = $this->json('post', 'chatbot-ajax', ['message' => $this->name]);
         $this->flushSession();
@@ -120,7 +118,7 @@ class ChatBotControllerTest extends TestCase {
          * Check if age is correct and its the last attribute it returns END
          */
 
-        $this->session(['lastAsk' => $this->attAge, 'infoAskUser' => ['age'], 'fullConver' => '']);
+        $this->session(['test' => 1, 'lastAsk' => $this->attAge, 'infoAskUser' => ['age'], 'fullConver' => '']);
 
         $response = $this->json('post', 'chatbot-ajax', ['message' => $this->age]);
         $this->flushSession();
@@ -137,7 +135,7 @@ class ChatBotControllerTest extends TestCase {
          * Check if age is wrong and its the last attribute it returns ERROR
          */
 
-        $this->session(['lastAsk' => $this->attAge, 'infoAskUser' => ['age'], 'fullConver' => '']);
+        $this->session(['test' => 1, 'lastAsk' => $this->attAge, 'infoAskUser' => ['age'], 'fullConver' => '']);
 
         $response = $this->json('post', 'chatbot-ajax', ['message' => $this->name]);
         $this->flushSession();
