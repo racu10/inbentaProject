@@ -17,5 +17,6 @@
 ## Unit testing
 
 For execute unit tests with command line -> inside the root project, execute vendor/bin/phpunit.
+Test for the controller are located in /tests/unit/ as ChatBotControllerTest.php
 
 
