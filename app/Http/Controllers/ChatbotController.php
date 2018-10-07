@@ -156,14 +156,14 @@ class ChatbotController extends Controller {
         /*
          * message -> input message from the user
          * validationType -> [ //It need to get the attribute that its analyzing
-         *  - text :: Only validates if is not empty or null
+         *  - name :: Only validates if is not empty or null
          *  - age :: Validates if the input is an age between min and max from constants
          *  - email :: Validates if the input is a correct email
          * ]
          * 
          */
         $comp = false;
-        if ($message !== '') {
+        if ($message !== '' && $message !== null) {
             switch (strtolower($validationType)) {
                 case 'age': //Validates if is an number and the age is between a real range
                     $min = Config::get('constants.ranges.age.min');
